@@ -1771,9 +1771,7 @@ h2,h3{font-family:"Libertinus","Rubik",sans-serif;color:var(--ink);margin:0;line
 /* clean-page interactivity: door grid fill, carousels, accordion single-open */
 (function(){
   var BASE="https://xn--haustren-neuss-ksb.de/wp-content/uploads/";
-  // door grid
-  var dg=document.getElementById('doorgrid');
-  if(dg){ for(var i=3;i<=22;i++){ var im=new Image(); im.src=BASE+'MK'+i+'.jpg'; im.alt='Haustür Modell MK'+i; im.loading='lazy'; dg.appendChild(im); } }
+  // door grid: the 20 door tiles are static in the HTML — no JS fill (removed buggy MK3–MK22 loop)
   // carousels
   function carousel(carId,dotsId,per){
     var root=document.getElementById(carId); if(!root) return;
